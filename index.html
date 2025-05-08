@@ -14,11 +14,6 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #f1f1f1;
-      transition: background 0.5s, color 0.5s;
-    }
-    body.light-mode {
-      background: #f5f5f5;
-      color: #222;
     }
     header {
       text-align: center;
@@ -43,18 +38,7 @@
       text-decoration: none;
       font-weight: bold;
     }
-    .toggle-btn {
-      position: fixed;
-      top: 15px;
-      right: 15px;
-      background: #00e5ff;
-      color: #121212;
-      padding: 8px 12px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      z-index: 999;
-    }
+
     .section {
       padding: 40px 20px;
       max-width: 1100px;
@@ -148,6 +132,14 @@
       margin-bottom: 10px;
     }
 
+    .extras {
+      font-size: 1em;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -158,8 +150,6 @@
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Mode</button>
-
   <header>
     <h1>Shyam Sundar Biswas</h1>
     <p>Android & Backend Developer | DSA Enthusiast | ECE @ RGIPT</p>
@@ -173,102 +163,43 @@
   <div class="goal section">
     I aim to become a versatile software engineer by building impactful products and mastering system design,
     backend architecture, and high-performance Android applications. My passion lies in solving real-world
-    problems using efficient algorithms and scalable code. I constantly explore new technologies and challenge myself
-    through projects and competitive coding to grow as a developer.
+    problems using efficient algorithms and scalable code.
   </div>
 
   <div class="section">
     <h2>Projects</h2>
     <div class="project-grid">
-      <!-- Project Cards Here -->
-      <div class="project-card">
-        <div class="project-image"></div>
-        <div class="project-content">
-          <h3>BioTend - Attendance App</h3>
-          <p>Smart Android app using biometrics, geolocation, and Firebase for seamless student attendance management.</p>
-          <a href="https://github.com/shyam21biswas/Attendance-Collector">View Project →</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image"></div>
-        <div class="project-content">
-          <h3>RideEstimator App</h3>
-          <p>Compare real-time ride costs from Uber and Ola using Google Maps API and REST integration.</p>
-          <a href="https://github.com/shyam21biswas/FindRide">View Project →</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image"></div>
-        <div class="project-content">
-          <h3>Secure TODO API</h3>
-          <p>RESTful backend in Kotlin (Ktor) with JWT auth and PostgreSQL. Full CRUD with clean architecture.</p>
-          <a href="https://github.com/shyam21biswas/TODO-ktor">View Project →</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image"></div>
-        <div class="project-content">
-          <h3>Deribit Trading System</h3>
-          <p>High-performance trading bot for Deribit built in C++ with WebSocket and REST support for fast execution.</p>
-          <a href="https://github.com/shyam21biswas/Derbittrade">View Project →</a>
-        </div>
-      </div>
+      <div class="project-card"><div class="project-image"></div><div class="project-content"><h3>BioTend - Attendance App</h3><p>Biometric + location-based attendance using Firebase.</p><a href="https://github.com/shyam21biswas/Attendance-Collector">View Project →</a></div></div>
+      <div class="project-card"><div class="project-image"></div><div class="project-content"><h3>RideEstimator</h3><p>Compare Uber/Ola rides in real-time using Google Maps API.</p><a href="https://github.com/shyam21biswas/FindRide">View Project →</a></div></div>
+      <div class="project-card"><div class="project-image"></div><div class="project-content"><h3>Secure TODO API</h3><p>Ktor-based API with JWT and PostgreSQL.</p><a href="https://github.com/shyam21biswas/TODO-ktor">View Project →</a></div></div>
+      <div class="project-card"><div class="project-image"></div><div class="project-content"><h3>Deribit Trading Bot</h3><p>C++ low-latency trading engine using REST/WebSocket.</p><a href="https://github.com/shyam21biswas/Derbittrade">View Project →</a></div></div>
     </div>
   </div>
 
   <div class="section">
     <h2>Tech Stack</h2>
     <div class="stack-grid">
-      <!-- Tech Stack Cards (same as previous) -->
-      <div>
-        <h3><i class="bi bi-phone"></i> Android & Mobile</h3>
-        <ul>
-          <li>📱 Kotlin</li>
-          <li>🧩 Jetpack Compose</li>
-          <li>🧱 MVVM Architecture</li>
-          <li>☁️ Firebase (Firestore, Auth)</li>
-          <li>📍 Google Maps API</li>
-        </ul>
-      </div>
-      <div>
-        <h3><i class="bi bi-hdd-stack"></i> Backend</h3>
-        <ul>
-          <li>🛠️ Ktor (Kotlin)</li>
-          <li>🧪 RESTful APIs</li>
-          <li>🗃️ PostgreSQL + Exposed ORM</li>
-          <li>🔐 JWT Authentication</li>
-          <li>🌐 cURL / WebSockets</li>
-        </ul>
-      </div>
-      <div>
-        <h3><i class="bi bi-braces"></i> Competitive & Core</h3>
-        <ul>
-          <li>⚙️ DSA</li>
-          <li>💻 C++, Python</li>
-          <li>📚 DBMS, COA, OS</li>
-          <li>🤖 AI / ML Fundamentals</li>
-        </ul>
-      </div>
-      <div>
-        <h3><i class="bi bi-tools"></i> Tools</h3>
-        <ul>
-          <li>🛠️ Git & GitHub</li>
-          <li>🧪 Postman</li>
-          <li>🌐 Android Studio, VS Code</li>
-          <li>🎨 Figma</li>
-        </ul>
-      </div>
+      <div><h3><i class="bi bi-phone"></i> Android</h3><ul><li>Kotlin</li><li>Jetpack Compose</li><li>Firebase</li></ul></div>
+      <div><h3><i class="bi bi-hdd-stack"></i> Backend</h3><ul><li>Ktor</li><li>REST APIs</li><li>PostgreSQL</li></ul></div>
+      <div><h3><i class="bi bi-cpu"></i> Core</h3><ul><li>DSA</li><li>C++, Python</li><li>DBMS, OS</li></ul></div>
+      <div><h3><i class="bi bi-tools"></i> Tools</h3><ul><li>Git/GitHub</li><li>Postman</li><li>VS Code, Android Studio</li></ul></div>
     </div>
   </div>
 
   <div class="section">
     <h2>Achievements</h2>
     <ul class="achievements">
-      <li>✅ Selected for GoQuant’s Algorithmic Trading Bootcamp (2025)</li>
-      <li>✅ Solved 400+ Leetcode Problems</li>
-      <li>✅ Prototyped at Google Maps Hackathon</li>
-      <li>✅ Top 16 in World Robotic Championship (AICRA)</li>
+      <li>🏆 400+ problems solved on LeetCode</li>
+      <li>🥇 Top 16 in World Robotics Championship</li>
+      <li>🚀 Finalist at Google Maps Hackathon</li>
+      <li>🎯 GoQuant Trading Bootcamp participant</li>
     </ul>
+  </div>
+
+  <div class="section extras">
+    <h2>Extras</h2>
+    <p>🧠 I love problem-solving and building projects with real-world value. I'm also passionate about contributing to open-source and exploring new technologies like AI/ML and blockchain.</p>
+    <p>🛠 Currently learning about microservices, advanced system design, and contributing to open-source Kotlin libraries.</p>
   </div>
 
   <footer>
@@ -276,11 +207,6 @@
   </footer>
 
   <script>
-    // Dark Mode Toggle
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
-    }
-
     // Reveal sections on scroll
     const sections = document.querySelectorAll('.section');
     window.addEventListener('scroll', () => {
