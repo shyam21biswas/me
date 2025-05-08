@@ -1,138 +1,183 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shyam Sundar Biswas - Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        header {
-            text-align: center;
-            padding: 40px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            color: #00bcd4;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #aaa;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #80d8ff;
-            text-decoration: none;
-        }
-        .section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        .section h2 {
-            font-size: 2em;
-            border-bottom: 2px solid #00bcd4;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .zigzag {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .zigzag .card {
-            display: flex;
-            flex-direction: row;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        .zigzag .card:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        .card-content {
-            flex: 1;
-        }
-        .card-content h3 {
-            margin: 0;
-            color: #00e676;
-        }
-        .card-content p {
-            margin: 10px 0;
-        }
-        .card-content a {
-            color: #64b5f6;
-            text-decoration: none;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-            background-color: #1a1a1a;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Shyam Sundar Biswas - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    header {
+      text-align: center;
+      padding: 40px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #00bcd4;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #aaa;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #80d8ff;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2em;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .zigzag {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .card {
+      display: flex;
+      flex-direction: row;
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .zigzag .card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .card-content {
+      flex: 1;
+      padding: 0 20px;
+    }
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #00e676;
+    }
+    .card-content p {
+      margin: 10px 0;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    .card-content a {
+      color: #64b5f6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #00e676;
+      color: #121212;
+      padding: 12px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background-color: #00c853;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      background-color: #1a1a1a;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Shyam Sundar Biswas</h1>
-        <p>DSA Enthusiast | Android Developer | Firebase | ECE @ RGIPT</p>
-        <nav>
-            <a href="https://github.com/shyam21biswas">GitHub</a>
-            <a href="https://linkedin.com/in/shyam-sundar-biswas-8b131b267">LinkedIn</a>
-            <a href="https://leetcode.com/u/SHYAM_21/">LeetCode</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Shyam Sundar Biswas</h1>
+    <p>DSA Enthusiast | Android Developer | Firebase | ECE @ RGIPT</p>
+    <nav>
+      <a href="https://github.com/shyam21biswas">GitHub</a>
+      <a href="https://linkedin.com/in/shyam-sundar-biswas-8b131b267">LinkedIn</a>
+      <a href="https://leetcode.com/u/SHYAM_21/">LeetCode</a>
+    </nav>
+  </header>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <div class="zigzag">
-            <div class="card">
-                <div class="card-content">
-                    <h3>BioTend - Smart Attendance App</h3>
-                    <p>Android app for student attendance using biometrics, geolocation, and Firestore real-time updates.</p>
-                    <a href="https://github.com/shyam21biswas/Attendance-Collector">GitHub Repo →</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>RideEstimator App</h3>
-                    <p>Ride fare comparison using Google Maps and REST APIs from multiple ride-hailing platforms.</p>
-                    <a href="https://github.com/shyam21biswas/FindRide">GitHub Repo →</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-content">
-                    <h3>Secure TODO API</h3>
-                    <p>Ktor backend with JWT authentication and PostgreSQL for secure CRUD-based task management.</p>
-                    <a href="https://github.com/shyam21biswas/TODO-ktor">GitHub Repo →</a>
-                </div>
-            </div>
+  <div class="section">
+    <h2>Projects</h2>
+    <div class="zigzag">
+      <div class="card">
+        <div class="card-content">
+          <h3>BioTend - Smart Attendance App</h3>
+          <p>Revolutionized student attendance with biometrics, geolocation, and Firestore real-time sync.</p>
+          <a href="https://github.com/shyam21biswas/Attendance-Collector">View on GitHub →</a>
         </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>RideEstimator App</h3>
+          <p>Real-time fare comparison across Uber, Ola, etc. using REST APIs and Google Maps.</p>
+          <a href="https://github.com/shyam21biswas/FindRide">View on GitHub →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Secure TODO API</h3>
+          <p>Full-stack Ktor backend with JWT auth and PostgreSQL. Clean architecture with Exposed ORM.</p>
+          <a href="https://github.com/shyam21biswas/TODO-ktor">View on GitHub →</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Deribit Trading System</h3>
+          <p>High-performance C++ bot using WebSocket and REST APIs for Deribit Testnet trading.</p>
+          <a href="https://github.com/shyam21biswas/Derbittrade">View on GitHub →</a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="section">
-        <h2>Education</h2>
-        <p>Rajiv Gandhi Institute of Petroleum Technology, 2022–2026</p>
-        <p>B.Tech ECE | Minor in CSE | CGPA: 8.5</p>
-    </div>
+  <div class="section">
+    <h2>Education</h2>
+    <p>Rajiv Gandhi Institute of Petroleum Technology, 2022–2026</p>
+    <p>B.Tech ECE | Minor in CSE | CGPA: 8.5</p>
+  </div>
 
-    <div class="section">
-        <h2>Skills</h2>
-        <p>Kotlin, Jetpack Compose, Android Development, Firebase, PostgreSQL, DSA, REST APIs, Ktor</p>
-    </div>
+  <div class="section">
+    <h2>Skills</h2>
+    <p>Kotlin, Jetpack Compose, Firebase, REST APIs, PostgreSQL, DSA, Ktor, Android Studio, Git, C++</p>
+  </div>
 
-    <footer>
-        Contact: shyamsundarbiswas21@gmail.com | +91-7439459092
-    </footer>
+  <div class="section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xknlgvyd" method="POST" style="display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: auto;">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    Contact: shyamsundarbiswas21@gmail.com | +91-7439459092
+  </footer>
 </body>
 </html>
