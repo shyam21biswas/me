@@ -4,127 +4,113 @@
   <meta charset="UTF-8" />
   <title>Shyam Sundar Biswas - Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #f1f1f1;
+      background-color: #121212;
+      color: #ffffff;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 50px 20px 20px;
     }
+
     header h1 {
-      font-size: 3.5em;
+      font-size: 2.8em;
       margin: 0;
-      color: #00e5ff;
+      font-weight: 700;
     }
+
     header p {
-      font-size: 1.3em;
-      color: #aaa;
-      margin-top: 10px;
+      font-size: 1.2em;
+      color: #bbbbbb;
     }
+
     nav {
       margin-top: 15px;
     }
+
     nav a {
-      margin: 0 15px;
+      margin: 0 12px;
       color: #81d4fa;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #00e5ff;
     }
 
     .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
+
     .section h2 {
-      font-size: 2.4em;
-      border-bottom: 3px solid #00e5ff;
-      display: inline-block;
-      margin-bottom: 30px;
+      font-size: 1.8em;
+      margin-bottom: 25px;
     }
 
     .goal {
       text-align: center;
-      font-size: 1.15em;
-      color: #ccc;
-      line-height: 1.8;
-      max-width: 900px;
-      margin: 0 auto 60px;
+      color: #dddddd;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 40px;
     }
 
     .project-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .project-card {
-      position: relative;
-      background: #1f1f1f;
-      border-radius: 18px;
-      overflow: hidden;
-      padding: 0;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, #00e5ff, #7c4dff, #00e5ff);
-      border-radius: 20px;
-      z-index: -1;
-      filter: blur(10px);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
+      background-color: #f8f9fa;
+      color: #1a1a1a;
+      border-radius: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s ease;
     }
 
     .project-card:hover {
-      transform: scale(1.06);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+      transform: translateY(-5px);
     }
 
     .project-image {
-      height: 180px;
-      background: linear-gradient(135deg, #00e5ff, #7c4dff);
-    }
-
-    .project-content {
-      padding: 20px;
+      height: 140px;
+      background-color: #e0e0e0;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background-size: 60px;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .project-content h3 {
-      color: #00e676;
       margin: 0 0 10px;
+      font-size: 1.2em;
     }
 
     .project-content p {
-      font-size: 0.96em;
-      color: #ccc;
+      font-size: 0.95em;
+      color: #333;
     }
 
     .project-content a {
       display: inline-block;
-      margin-top: 10px;
-      color: #64b5f6;
+      margin-top: 12px;
+      background-color: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 24px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+    }
+
+    .project-content a:hover {
+      background-color: #333;
     }
 
     .stack-grid {
@@ -134,39 +120,32 @@
     }
 
     .stack-grid > div {
+      background: #f5f5f5;
+      color: #222;
+      border-radius: 12px;
+      padding: 20px;
       flex: 1;
       min-width: 260px;
-      background: rgba(255, 255, 255, 0.05);
-      border-left: 4px solid #00e5ff;
-      border-radius: 10px;
-      padding: 20px;
-      transition: transform 0.2s;
-    }
-
-    .stack-grid > div:hover {
-      transform: scale(1.03);
     }
 
     .stack-grid h3 {
-      color: #81d4fa;
-      font-size: 1.2em;
       margin-top: 0;
+      font-size: 1.1em;
+      margin-bottom: 10px;
     }
 
     .stack-grid ul {
       list-style: none;
-      padding: 0;
-      line-height: 1.6;
+      padding-left: 0;
       font-size: 0.95em;
+      line-height: 1.6;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background-color: #111;
       font-size: 0.9em;
-      color: #999;
-      margin-top: 40px;
+      color: #888;
     }
   </style>
 </head>
@@ -181,46 +160,44 @@
     </nav>
   </header>
 
-  <div class="goal">
-       I aim to become a versatile software engineer by building impactful products and mastering system design,
-    backend architecture, and high-performance Android applications. My passion lies in solving real-world
-    problems using efficient algorithms and scalable code. I constantly explore new technologies and challenge myself
-    through projects and competitive coding to grow as a developer.
-  </div>
-
   <div class="section">
+    <div class="goal">
+      I aim to become a versatile software engineer by building impactful products and mastering system design,
+      backend architecture, and high-performance Android applications.
+    </div>
+
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image" style="background-image: url('https://www.svgrepo.com/show/331482/fingerprint.svg');"></div>
         <div class="project-content">
           <h3>BioTend - Attendance App</h3>
           <p>Biometric + location-based attendance system using Firebase and geofencing.</p>
-          <a href="https://github.com/shyam21biswas/Attendance-Collector">View Project →</a>
+          <a href="https://github.com/shyam21biswas/Attendance-Collector">View Project</a>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image" style="background-image: url('https://www.svgrepo.com/show/365944/taxi.svg');"></div>
         <div class="project-content">
           <h3>RideEstimator</h3>
-          <p>Compare Uber/Ola fares in real-time using Google Maps API and REST endpoints.</p>
-          <a href="https://github.com/shyam21biswas/FindRide">View Project →</a>
+          <p>Compare Uber/Ola fares using Google Maps API and REST endpoints.</p>
+          <a href="https://github.com/shyam21biswas/FindRide">View Project</a>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image" style="background-image: url('https://www.svgrepo.com/show/439206/todo-list.svg');"></div>
         <div class="project-content">
           <h3>Secure TODO API</h3>
-          <p>Kotlin Ktor backend with JWT, PostgreSQL, Exposed ORM, and role-based security.</p>
-          <a href="https://github.com/shyam21biswas/TODO-ktor">View Project →</a>
+          <p>Kotlin Ktor backend with JWT, PostgreSQL, Exposed ORM, and clean architecture.</p>
+          <a href="https://github.com/shyam21biswas/TODO-ktor">View Project</a>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image"></div>
+        <div class="project-image" style="background-image: url('https://www.svgrepo.com/show/429754/trading-chart.svg');"></div>
         <div class="project-content">
           <h3>Deribit Trading Bot</h3>
           <p>Low-latency C++ trading engine for Deribit using REST + WebSocket APIs.</p>
-          <a href="https://github.com/shyam21biswas/Derbittrade">View Project →</a>
+          <a href="https://github.com/shyam21biswas/Derbittrade">View Project</a>
         </div>
       </div>
     </div>
@@ -230,35 +207,35 @@
     <h2>Tech Stack</h2>
     <div class="stack-grid">
       <div>
-        <h3><i class="bi bi-phone"></i> Android & Mobile</h3>
+        <h3>Android</h3>
         <ul>
-          <li>📱 Kotlin</li>
-          <li>🧩 Jetpack Compose</li>
-          <li>🧱 MVVM Architecture</li>
-          <li>☁️ Firebase</li>
+          <li>Kotlin</li>
+          <li>Jetpack Compose</li>
+          <li>MVVM</li>
         </ul>
       </div>
       <div>
-        <h3><i class="bi bi-hdd-stack"></i> Backend</h3>
+        <h3>Backend</h3>
         <ul>
-          <li>🛠️ Ktor</li>
-          <li>🗃️ PostgreSQL</li>
-          <li>🔐 JWT Auth</li>
+          <li>Ktor</li>
+          <li>PostgreSQL</li>
+          <li>JWT Auth</li>
         </ul>
       </div>
       <div>
-        <h3><i class="bi bi-braces"></i> Core & Competitive</h3>
+        <h3>Core CS</h3>
         <ul>
-          <li>⚙️ DSA, OS, DBMS</li>
-          <li>💻 C++, Python</li>
+          <li>DSA, DBMS</li>
+          <li>OS, COA</li>
+          <li>C++, Python</li>
         </ul>
       </div>
       <div>
-        <h3><i class="bi bi-tools"></i> Tools</h3>
+        <h3>Tools</h3>
         <ul>
-          <li>🧰 Git, GitHub</li>
-          <li>🧪 Postman</li>
-          <li>🎨 Figma, VS Code</li>
+          <li>Git & GitHub</li>
+          <li>Postman</li>
+          <li>Android Studio</li>
         </ul>
       </div>
     </div>
