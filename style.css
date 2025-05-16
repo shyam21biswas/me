@@ -46,4 +46,11 @@ footer {
   background-color: #ffffff;
   color: #121212;
 }
+.polygon {
+  clip-path: polygon(25% 5%, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 95%, 0% 75%, 0% 25%);
+  transition: transform 0.3s ease;
+}
 
+.polygon:hover {
+  transform: scale(1.05);
+}
